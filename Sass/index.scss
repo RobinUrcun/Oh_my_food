@@ -1,3 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    font-family:'roboto';
+}
+
 .flex_row_center{
     display: flex;
     justify-content: center;
@@ -17,15 +24,19 @@ header{
 
 section{
     background-color: rgb(247, 246, 246);
-
+    display: inline-block;
+    
     & h1{
         display: flex;
         align-items: center;
         font-size: 15px;
         background-color: rgb(234, 234, 234);
         height: 50px;
+        font-weight: 100;
+        box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.448);
     }
     & h2{
+        font-size: 21px;
         text-align: center;
         width: 60%;
         margin: 30px auto 0 auto;
@@ -34,6 +45,9 @@ section{
         text-align: center;
         width: 80%;
         margin: 10px auto 0 auto;
+        font-size: 15px;
+        font-weight: 100;
+
     }
     & a {
         display: flex;
