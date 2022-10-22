@@ -1,0 +1,19 @@
+@mixin link{
+    color: black;
+    text-decoration: none;
+    
+}
+
+@mixin flex_row_center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex_column_center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

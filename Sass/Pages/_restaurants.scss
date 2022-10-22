@@ -1,0 +1,37 @@
+main img{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.page_menu{
+
+    position: relative;
+    top: -170px;
+    padding: 40px 5% 0 5%;
+    border-radius: 50px;
+    background-color: $grey-principal;
+
+    .titre_restaurant{
+        @include flex_row_center;
+        justify-content: space-between;
+
+        h2{
+            font-size: 40px;
+            font-weight: 1000px;
+            font-style: italic;
+        }
+        i{
+            font-size: 40px;
+        }
+    }
+    h3{
+        font-size: 25px;
+        font-weight: 300;
+        box-shadow: inset 0px -5px 0 rgb(164, 223, 207);
+        padding-bottom: 15px;
+        width: 65px;
+    }
+
+}

@@ -1,0 +1,84 @@
+.section-fonctionnement li{
+    background-color: $grey-principal;
+    height: 105px;
+    list-style-type: none;
+    margin-bottom: 33px;
+    border-radius: 35px;
+    font-size: 25px;
+    box-shadow: $shadow-main;
+
+    @include flex_row_center;
+    justify-content: flex-start;
+    
+    
+}
+
+
+.section-restaurents{
+
+    background-color: $grey-principal;
+    padding: 45px 5% 70px 5%;
+
+    a:visited, a:link{
+        @include link;
+    }
+
+    h2{
+        font-size: 35px;
+        margin-bottom: 30px ;
+    }
+        
+    article{
+        box-shadow: $shadow-main;
+        border-radius: 20px;
+        font-size: 25px;
+    
+        img {
+            object-fit: cover;
+            height: 265px;
+            width: 100%;
+            border-radius: 20px 20px 0 0;        
+        }
+
+    
+        h3{
+            margin: 10px  auto 0px 20px;
+        }
+    
+        p{
+            margin-left: 20px;
+            margin-top: 5px;
+            padding-bottom: 25px;
+        }
+
+    }
+}
+
+.card-menu{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    h4{
+        font-size: 27px;
+        font-weight: 500;
+        margin: 15px auto 15px 20px;
+    }
+    div{
+        @include flex_row_center;
+        justify-content: space-between;
+        p{
+            font-size: 22px;
+            font-weight: 300;
+            margin: 0 auto 15px 20px;
+    
+        }
+        .price{
+            width: 15%;
+            margin: 0;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+    }
+}

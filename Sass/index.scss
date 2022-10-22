@@ -1,66 +1,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-*{
-font-family:'roboto';
-}
+@import "./utils/_variables";
+@import "./utils/_functions";
+@import "./utils/_mixins";
+@import "./utils/_extensions";
+@import "./base/_base";
+@import "./base/_typography";
+@import "./components/_buttons";
+@import "./Components/_cards";
+@import "./Pages/_homepage";
+@import "./layouts/_header";
+@import "./pages/_restaurants";
+@import "./layouts/_footer";
+@import "./layouts/_container";
+@import "./layouts/_form";
+@import "./pages/_work";
+@import "./pages/_project";
 
-.flex_row_center{
-    display: flex;
-    justify-content: center;
-}
-
-.flex_column_center{
-    display: flex;
-    justify-content: center;
-}
-
-header{
-    & img{
-        width: 45%;
-        margin: 20px 0 20px 0;
-    }
-}
-
-section{
-    background-color: rgb(247, 246, 246);
-    display: inline-block;
-    
-    & h1{
-        display: flex;
-        align-items: center;
-        font-size: 15px;
-        background-color: rgb(234, 234, 234);
-        height: 50px;
-        font-weight: 100;
-        box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.448);
-    }
-    & h2{
-        font-size: 21px;
-        text-align: center;
-        width: 60%;
-        margin: 30px auto 0 auto;
-    }
-    & p {
-        text-align: center;
-        width: 80%;
-        margin: 10px auto 0 auto;
-        font-size: 15px;
-        font-weight: 100;
-
-    }
-    & a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 30px auto 30px auto;
-        border: 1px solid palevioletred;
-        background-color: palevioletred;
-        height: 50px;
-        width: 55%;
-        border-radius: 20px;
-        text-align: center;
-        text-decoration: none;
-        color: white;
-        font-size: 20px;
-    }
