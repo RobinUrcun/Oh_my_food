@@ -21,22 +21,8 @@
         font-weight: 100;
 
     }
-    a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 50px auto 80px auto;
-        border: 1px solid palevioletred;
-        background-color: palevioletred;
-        height: 70px;
-        width: 55%;
-        border-radius: 35px;
-        text-align: center;
-        text-decoration: none;
-        color: white;
-        font-size: 22px;
-    }
 }
+
 
 .section-fonctionnement{
     @extend .padding_5;
@@ -46,4 +32,3 @@
         font-size: 35px;
     }
 }
-

@@ -7,6 +7,22 @@
   font-family: "roboto";
 }
 
+.button_principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto 80px auto;
+  border: 1px solid palevioletred;
+  background-color: palevioletred;
+  height: 70px;
+  width: 55%;
+  border-radius: 35px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+
 .section-fonctionnement li {
   background-color: rgb(247, 246, 246);
   height: 105px;
@@ -105,21 +121,6 @@
   font-size: 25px;
   font-weight: 100;
 }
-.explorer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px auto 80px auto;
-  border: 1px solid palevioletred;
-  background-color: palevioletred;
-  height: 70px;
-  width: 55%;
-  border-radius: 35px;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  font-size: 22px;
-}
 
 .section-fonctionnement h2 {
   margin: 70px 0 45px 0;
@@ -156,9 +157,10 @@ main img {
 
 .page_menu {
   position: relative;
-  top: -170px;
-  padding: 40px 5% 0 5%;
-  border-radius: 50px;
+  margin-top: -170px;
+  padding: 40px 5% 50px 5%;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
   background-color: rgb(247, 246, 246);
 }
 .page_menu .titre_restaurant {
@@ -183,6 +185,9 @@ main img {
   padding-bottom: 15px;
   width: 65px;
 }
+.page_menu a {
+  margin-top: 40px;
+}
 
 footer {
   background-color: rgb(43, 43, 43);
@@ -194,6 +199,9 @@ footer li {
   color: #FFF;
   margin-bottom: 15px;
 }
+footer li img {
+  filter: invert(1);
+}
 footer li i {
   margin-right: 20px;
 }
@@ -201,8 +209,4 @@ footer li a:link, footer li a:visited {
   color: black;
   text-decoration: none;
   color: #FFF;
-}
-
-.container_restaurants {
-  position: absolute;
 }/*# sourceMappingURL=index.css.map */
