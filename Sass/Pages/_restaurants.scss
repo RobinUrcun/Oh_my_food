@@ -9,7 +9,7 @@ main img{
 
     position: relative;
     margin-top: -170px;
-    padding: 40px 5% 50px 5%;
+    padding: 20px 5% 50px 5%;
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
     background-color: $grey-principal;
@@ -34,8 +34,8 @@ main img{
         padding-bottom: 15px;
         width: 65px;
     }
+}
 
-    a{
-    
-    }
+.explorer a{
+    margin-top: 50px;
 }

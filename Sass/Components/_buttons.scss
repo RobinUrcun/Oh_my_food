@@ -2,14 +2,50 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px auto 80px auto;
+    margin: 70px auto 80px auto;
     border: 1px solid palevioletred;
     background-color: palevioletred;
     height: 70px;
-    width: 55%;
+    width: 50%;
     border-radius: 35px;
     text-align: center;
     text-decoration: none;
     color: white;
     font-size: 22px;
+}
+
+
+.button_nouveau{
+    position: absolute;
+    background-color: $vert-menthe;
+    color: rgb(28, 96, 78);
+    width: 110px;
+    font-size: 20px;
+    padding: 10px 0 10px 0;
+    right: 20px;
+    border-radius: 5px;
+
+    @include flex_row_center;
+    align-items: baseline;
+}
+
+.number_fonctionnement{
+    position: absolute;
+    left: -15px;
+    border: 1px $purple solid;
+    background-color: $purple;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 50%;
+    color: white;
+    @include flex_row_center;
+}
+
+.button_homepage{
+    font-size: 30px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    color: black;
 }

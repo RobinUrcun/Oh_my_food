@@ -1,10 +1,8 @@
 
-
 .explorer{
     background-color: $grey-principal;
     display: inline-block;
     width: 100%;
-    padding: $pading_5;
 
     
     h2{
@@ -24,11 +22,54 @@
 }
 
 
+.section-fonctionnement li{
+    background-color: $grey-principal;
+    height: 105px;
+    list-style-type: none;
+    margin-bottom: 33px;
+    border-radius: 35px;
+    font-size: 25px;
+    box-shadow: $shadow-main;
+
+    @include flex_row_center;
+    justify-content: flex-start;
+    
+    
+}
+
+
+
+.section-restaurants{
+
+    background-color: $grey-principal;
+    padding: 45px 5% 70px 5%;
+
+    a:visited, a:link{
+        @include link;
+    }
+
+    h2{
+        font-size: 35px;
+        margin-bottom: 30px ;
+    }
+}
+
+
+
 .section-fonctionnement{
     @extend .padding_5;
+    padding-bottom: 50px;
 
     h2{
         margin: 70px 0 45px 0;
         font-size: 35px;
+    }
+
+    li{
+        position: relative;
+
+        p, i{
+            margin-left: 35px;
+        }
     }
 }
