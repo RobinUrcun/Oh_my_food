@@ -5,7 +5,7 @@
     border-radius: 20px;
     margin-bottom: 30px;
     h4{
-        font-size: 27px;
+        font-size: 20px;
         font-weight: 500;
         margin: 15px auto 15px 20px;
     }
@@ -13,7 +13,7 @@
         @include flex_row_center;
         justify-content: space-between;
         p{
-            font-size: 22px;
+            font-size: 16px;
             font-weight: 300;
             margin: 0 auto 15px 20px;
     
@@ -26,8 +26,63 @@
         }
     }
 }
+.position_relative{
+    position: relative;
+    transition: all 1s;
+}
+.like{
+    position: absolute;
+    display: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 40px;
+    color: #FFF;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0px;
+    width: 80px;
+    height: 100%;
+    background-color: rgb(170, 224, 209);
+    
+
+}
+
+.card-menu{
+    position: relative;
 
 
+
+
+    &:active{
+
+        & > .like{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-origin: 100% 50%;
+            animation-name: add_to_panier;
+            animation-duration: 2s;
+        }
+        & .like > i{
+            transform: rotate(360deg);
+            
+        }
+        & > h4, & > div{
+            animation-name: add_to_panier-retrecir;
+            animation-duration: 2s;
+        }
+    }
+}
+
+.card-menu .like i{
+    display: block;
+    transition: transform 2s;
+}
+.card-menu h4, .card-menu div{
+    transform-origin: 0% 50%;
+  
+}
 .section-restaurants article{
     box-shadow: $shadow-main;
     border-radius: 20px;
