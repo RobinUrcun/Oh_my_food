@@ -20,7 +20,7 @@
   border: 1px solid palevioletred;
   background-color: palevioletred;
   height: 70px;
-  width: 50%;
+  width: 300px;
   border-radius: 35px;
   text-align: center;
   text-decoration: none;
@@ -76,7 +76,7 @@
 .explorer h2 {
   font-size: 32px;
   text-align: center;
-  width: 60%;
+  width: 70%;
   margin: 60px auto 30px auto;
 }
 .explorer p {
@@ -106,13 +106,13 @@
   background-color: rgb(247, 246, 246);
   padding: 45px 5% 70px 5%;
 }
-.section-restaurants a:visited, .section-restaurants a:link {
-  color: black;
-  text-decoration: none;
-}
 .section-restaurants h2 {
   font-size: 35px;
   margin-bottom: 30px;
+}
+.section-restaurants .responsiv_flex a:visited, .section-restaurants a:link {
+  color: black;
+  text-decoration: none;
 }
 
 .section-fonctionnement {
@@ -131,6 +131,7 @@
 
 header img {
   width: 45%;
+  max-width: 300px;
   margin: 30px auto 20px auto;
   display: flex;
   flex-direction: row;
@@ -151,7 +152,7 @@ header img {
   align-items: center;
 }
 
-main img {
+.bandeau img {
   height: 500px;
   width: 100%;
   -o-object-fit: cover;
@@ -160,7 +161,7 @@ main img {
 
 .page_menu {
   position: relative;
-  top: -200px;
+  margin-top: -200px;
   padding: 20px 5% 50px 5%;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
@@ -215,87 +216,82 @@ footer li a:link, footer li a:visited {
   color: #FFF;
 }
 
+.container_restaurants {
+  height: 100%;
+}
+
 .card-menu {
   display: flex;
-  flex-direction: column;
+  position: relative;
+  flex-direction: row;
   background-color: #FFF;
   border-radius: 20px;
   margin-bottom: 30px;
+  overflow: hidden;
 }
-.card-menu h4 {
+.card-menu .plat {
+  flex-direction: column;
+  width: 90%;
+  white-space: nowrap;
+}
+.card-menu .plat h4 {
   font-size: 20px;
   font-weight: 500;
   margin: 15px auto 15px 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.card-menu div {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-}
-.card-menu div p {
-  font-size: 16px;
+.card-menu .plat p {
+  font-size: 17px;
   font-weight: 300;
   margin: 0 auto 15px 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.card-menu div .price {
-  width: 15%;
-  margin: 0;
+.card-menu .price {
+  display: block;
   font-weight: 500;
-  margin-bottom: 15px;
-}
-
-.position_relative {
-  position: relative;
-  transition: all 1s;
+  height: 50%;
+  width: 10%;
+  text-align: center;
 }
 
 .like {
   position: absolute;
-  display: none;
+  display: flex;
+  right: -80px;
+  height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   font-size: 40px;
   color: #FFF;
   align-items: center;
   justify-content: center;
-  top: 0;
-  right: 0px;
   width: 80px;
-  height: 100%;
-  background-color: rgb(170, 224, 209);
+  background-color: #99E2D0;
 }
 
 .card-menu {
-  position: relative;
+  transition: transform 1s 5s;
 }
-.card-menu:active > .like {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform-origin: 100% 50%;
-  -webkit-animation-name: add_to_panier;
-          animation-name: add_to_panier;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+.card-menu:hover > .like {
+  -webkit-animation: add_to_panier 1s forwards;
+          animation: add_to_panier 1s forwards;
 }
-.card-menu:active .like > i {
+.card-menu:hover .like > i {
   transform: rotate(360deg);
 }
-.card-menu:active > h4, .card-menu:active > div {
-  -webkit-animation-name: add_to_panier-retrecir;
-          animation-name: add_to_panier-retrecir;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+.card-menu:hover > .plat {
+  transition: 1s;
+  width: calc(90% - 80px);
 }
 
 .card-menu .like i {
-  display: block;
-  transition: transform 2s;
+  transition: transform 0.5s linear 0.2s;
 }
 
-.card-menu h4, .card-menu div {
+.card-menu h4,
+.card-menu div {
   transform-origin: 0% 50%;
 }
 
@@ -312,6 +308,10 @@ footer li a:link, footer li a:visited {
   height: 265px;
   width: 100%;
   border-radius: 20px 20px 0 0;
+}
+.section-restaurants article:hover {
+  transition: transform 1s;
+  transform: scale(1.02);
 }
 .section-restaurants article .restaurants_indication {
   display: flex;
@@ -334,58 +334,42 @@ footer li a:link, footer li a:visited {
 
 @-webkit-keyframes add_to_panier {
   0% {
-    transform: scaleX(0);
-  }
-  30% {
-    transform: scaleX(1);
-  }
-  70% {
-    transform: scaleX(1);
+    transform: translate(0);
   }
   100% {
-    transform: scaleX(0);
+    transform: translate(-100%, 0);
   }
 }
 
 @keyframes add_to_panier {
   0% {
-    transform: scaleX(0);
-  }
-  30% {
-    transform: scaleX(1);
-  }
-  70% {
-    transform: scaleX(1);
+    transform: translate(0);
   }
   100% {
-    transform: scaleX(0);
+    transform: translate(-100%, 0);
   }
 }
-@-webkit-keyframes add_to_panier-retrecir {
-  0% {
-    transform: scaleX(1);
+@media (min-width: 1250px) {
+  .responsiv_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
-  30% {
-    transform: scaleX(80%);
+  .responsiv_flex a {
+    width: 45%;
   }
-  70% {
-    transform: scaleX(80%);
+  .section-fonctionnement ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  100% {
-    transform: scaleX(1);
+  .section-fonctionnement ul li {
+    width: 30%;
   }
-}
-@keyframes add_to_panier-retrecir {
-  0% {
-    transform: scaleX(1);
-  }
-  30% {
-    transform: scaleX(80%);
-  }
-  70% {
-    transform: scaleX(80%);
-  }
-  100% {
-    transform: scaleX(1);
+  .section_flex_responsive {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -8,7 +8,7 @@
     h2{
         font-size: 32px;
         text-align: center;
-        width: 60%;
+        width: 70%;
         margin: 60px auto 30px auto;
     }
     p {
@@ -44,13 +44,14 @@
     background-color: $grey-principal;
     padding: 45px 5% 70px 5%;
 
-    a:visited, a:link{
-        @include link;
-    }
-
     h2{
         font-size: 35px;
         margin-bottom: 30px ;
+    }
+
+
+    & .responsiv_flex a:visited, a:link{
+        @include link;
     }
 }
 

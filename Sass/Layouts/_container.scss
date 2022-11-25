@@ -1,89 +1,105 @@
-.card-menu{
+.container_restaurants {
+    height: 100%;
+}
+
+
+.card-menu {
     display: flex;
-    flex-direction: column;
+    position: relative;
+    flex-direction: row;
     background-color: #FFF;
     border-radius: 20px;
     margin-bottom: 30px;
-    h4{
-        font-size: 20px;
-        font-weight: 500;
-        margin: 15px auto 15px 20px;
-    }
-    div{
-        @include flex_row_center;
-        justify-content: space-between;
-        p{
-            font-size: 16px;
+    overflow: hidden;
+
+    .plat {
+        flex-direction: column;
+        width: 90%;
+        white-space: nowrap;
+
+
+
+        h4 {
+            font-size: 20px;
+            font-weight: 500;
+            margin: 15px auto 15px 20px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        p {
+            font-size: 17px;
             font-weight: 300;
             margin: 0 auto 15px 20px;
-    
-        }
-        .price{
-            width: 15%;
-            margin: 0;
-            font-weight: 500;
-            margin-bottom: 15px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+
         }
     }
+
+    .price {
+        display: block;
+        font-weight: 500;
+        height: 50%;
+        width: 10%;
+        text-align: center;
+
+    }
 }
-.position_relative{
-    position: relative;
-    transition: all 1s;
-}
-.like{
+
+.like {
     position: absolute;
-    display: none;
+    display: flex;
+    right: -80px;
+    height: 100%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     font-size: 40px;
     color: #FFF;
     align-items: center;
     justify-content: center;
-    top: 0;
-    right: 0px;
     width: 80px;
-    height: 100%;
-    background-color: rgb(170, 224, 209);
-    
+    background-color: #99E2D0;
+
 
 }
 
-.card-menu{
-    position: relative;
+.card-menu {
+    transition: transform 1s 5s;
 
+    &:hover {
 
+        &>.like {
+            animation: add_to_panier 1s forwards;
 
-
-    &:active{
-
-        & > .like{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transform-origin: 100% 50%;
-            animation-name: add_to_panier;
-            animation-duration: 2s;
         }
-        & .like > i{
+
+        & .like>i {
             transform: rotate(360deg);
-            
+
         }
-        & > h4, & > div{
-            animation-name: add_to_panier-retrecir;
-            animation-duration: 2s;
+
+        &>.plat {
+            transition: 1s;
+
+            width: calc(90% - 80px);
         }
+
     }
 }
 
-.card-menu .like i{
-    display: block;
-    transition: transform 2s;
+.card-menu .like i {
+    transition: transform 0.5s linear 0.2s;
 }
-.card-menu h4, .card-menu div{
+
+.card-menu h4,
+.card-menu div {
     transform-origin: 0% 50%;
-  
+
 }
-.section-restaurants article{
+
+.section-restaurants article {
     box-shadow: $shadow-main;
     border-radius: 20px;
     font-size: 25px;
@@ -94,24 +110,29 @@
         object-fit: cover;
         height: 265px;
         width: 100%;
-        border-radius: 20px 20px 0 0;        
+        border-radius: 20px 20px 0 0;
     }
 
-    .restaurants_indication{
+    &:hover {
+        transition: transform 1s;
+        transform: scale(1.02);
+    }
+
+    .restaurants_indication {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
 
-        h3{
+        h3 {
             margin: 15px 0 10px 20px;
         }
-        
-        p{
+
+        p {
             margin: 0 0 15px 20px;
             font-weight: 300;
         }
-        
-        i{
+
+        i {
             display: flex;
             align-items: center;
             font-size: 40px;

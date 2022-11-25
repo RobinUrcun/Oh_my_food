@@ -1,6 +1,7 @@
 header{
     & img{
         width: 45%;
+        max-width: 300px;
         margin: 30px auto 20px auto;
         @include flex_row_center;
         position: relative;
