@@ -16,4 +16,7 @@ header{
     padding: 12px 0 12px 0;
 
     @include flex_row_center;
+    i{
+        padding-right: 20px;
+    }
 }

@@ -41,9 +41,9 @@
     .price {
         display: block;
         font-weight: 500;
-        height: 50%;
         width: 10%;
-        text-align: center;
+        margin-top: auto;
+        margin-bottom: 10px;
 
     }
 }
@@ -105,6 +105,8 @@
     font-size: 25px;
     position: relative;
     margin-bottom: 25px;
+    transition: all .5s ease-in-out;
+
 
     img {
         object-fit: cover;
@@ -114,7 +116,6 @@
     }
 
     &:hover {
-        transition: transform 1s;
         transform: scale(1.02);
     }
 
@@ -139,4 +140,11 @@
             margin-right: 30px;
         }
     }
+}
+
+
+
+.section_flex_responsive section{
+
+    flex :1;
 }
