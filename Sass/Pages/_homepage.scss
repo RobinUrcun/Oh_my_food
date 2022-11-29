@@ -68,9 +68,27 @@
 
     li{
         position: relative;
+        background-color: $grey-principal;
+        height: 105px;
+        list-style-type: none;
+        margin-bottom: 33px;
+        border-radius: 35px;
+        font-size: 25px;
+        box-shadow: $shadow-main;
+
+        @include flex_row_center;
+        justify-content: flex-start;
 
         p, i{
             margin-left: 35px;
+        }
+    }
+
+    li:nth-child(3){
+        background-color: rgb(245, 237, 254);
+        i{
+            color: $purple;
+
         }
     }
 }
