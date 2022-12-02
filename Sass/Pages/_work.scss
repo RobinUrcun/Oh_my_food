@@ -16,11 +16,11 @@
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap: 24px;
 
         a{
 
-            width: 45%;
-            margin-bottom: 30px;
+            width: calc( 50% - 24px);
         }
 
     }
@@ -33,6 +33,14 @@
 
         & li{
             width: 30%;
+
+            p{
+                margin-left: 10px;
+            }
+
+            i{
+                margin-left: 25px;
+            }
         }
     }
     
@@ -43,5 +51,28 @@
         justify-content: space-between;
         gap: 20px;
         
+    }
+}
+
+.icone-color{
+    position: relative;
+
+    &::after{
+        font: var(--fa-font-solid);
+        content: "\f004";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        background: linear-gradient(-15deg, #FF79DA,  #9356DC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all .3s ease-in-out;
+
+    }
+    &:hover::after{
+        display: block;
     }
 }

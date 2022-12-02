@@ -30,9 +30,15 @@
     h3{
         font-size: 25px;
         font-weight: 300;
-        box-shadow: inset 0px -5px 0 rgb(164, 223, 207);
-        padding-bottom: 15px;
+
+    }
+    h3::after{
+        content: "";
+        display: block;
+        height: 4px;
         width: 65px;
+        background-color: #99E2D0;
+        margin-top: 8px;
     }
 }
 
