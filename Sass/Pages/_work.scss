@@ -54,25 +54,27 @@
     }
 }
 
-.icone-color{
+.icone-color-hp{
     position: relative;
 
     &::after{
         font: var(--fa-font-solid);
         content: "\f004";
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
         display: none;
         background: linear-gradient(-15deg, #FF79DA,  #9356DC);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        transition: all .3s ease-in-out;
-
     }
     &:hover::after{
         display: block;
     }
 }
+ .icone-color-restaurant{
+    @extend .icone-color-hp;
+
+    &::after{
+        bottom: 0;
+
+    }
+ }

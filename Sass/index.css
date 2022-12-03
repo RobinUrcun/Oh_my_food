@@ -430,23 +430,22 @@ footer li:nth-child(3) i {
     gap: 20px;
   }
 }
-.icone-color {
+.icone-color-hp, .icone-color-restaurant {
   position: relative;
 }
-.icone-color::after {
+.icone-color-hp::after, .icone-color-restaurant::after {
   font: var(--fa-font-solid);
   content: "\f004";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   display: none;
   background: linear-gradient(-15deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
 }
-.icone-color:hover::after {
+.icone-color-hp:hover::after, .icone-color-restaurant:hover::after {
   display: block;
+}
+
+.icone-color-restaurant::after {
+  bottom: 0;
 }/*# sourceMappingURL=index.css.map */
