@@ -320,8 +320,7 @@ footer li:nth-child(3) i {
   transition: transform 1s 5s;
 }
 .card-menu:hover > .like {
-  -webkit-animation: add_to_panier 1s forwards;
-          animation: add_to_panier 1s forwards;
+  animation: add_to_panier 2s forwards;
 }
 .card-menu:hover .like > i {
   transform: rotate(360deg);
@@ -377,17 +376,52 @@ footer li:nth-child(3) i {
   margin-right: 30px;
 }
 
-.section_flex_responsive section {
-  flex: 1;
+.annimation-entree {
+  position: fixed;
+  width: 100%;
+  height: 750px;
+  background-color: rgb(247, 246, 246);
+  z-index: 99;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  animation: annimation_entree 6s forwards;
 }
-
-@-webkit-keyframes add_to_panier {
-  0% {
-    transform: translate(0);
-  }
-  100% {
-    transform: translate(-100%, 0);
-  }
+.annimation-entree img {
+  width: 40%;
+  height: 60px;
+  animation: annimation_entree_booki 6s 1s;
+  opacity: 0;
+}
+.annimation-entree .barre_de_chargement {
+  width: 50%;
+  height: 20px;
+  border: black 2px solid;
+  border-radius: 20px;
+  z-index: 100;
+  position: relative;
+  opacity: 0;
+  animation: barre_de_chargement 1s 2s forwards;
+}
+.annimation-entree .barre_de_chargement img {
+  width: 80px;
+  height: 80px;
+}
+.annimation-entree .barre_de_chargement .remplissage {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-15deg, #9356DC, #FF79DA);
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  border-radius: 20px;
+  animation-name: remplissage;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  transform-origin: 0% 50%;
 }
 
 @keyframes add_to_panier {
@@ -448,4 +482,47 @@ footer li:nth-child(3) i {
 
 .icone-color-restaurant::after {
   bottom: 0;
+}
+
+@keyframes annimation_entree {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+@keyframes annimation_entree_booki {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes remplissage {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes barre_de_chargement {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=index.css.map */
