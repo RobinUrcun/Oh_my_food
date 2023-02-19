@@ -103,15 +103,20 @@
         opacity: 1;
 
     }
-    100%{
+    90%{
         opacity: 1;
     }
-    
+    100%{
+        opacity: 0;
+    }
  }
  @keyframes remplissage {
     0%{
         transform: scaleX(0);
         opacity: 1;
+    }
+    60%{
+        transform: scaleX(0.3);
     }
     100%{
         transform: scaleX(1);
