@@ -53,31 +53,6 @@
     }
 }
 
-.icone-color-hp{
-    position: relative;
-
-    &::after{
-        font: var(--fa-font-solid);
-        content: "\f004";
-        position: absolute;
-        display: none;
-        background: linear-gradient(-15deg, #FF79DA,  #9356DC);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    &:hover::after{
-        display: block;
-    }
-}
- .icone-color-restaurant{
-    @extend .icone-color-hp;
-
-    &::after{
-        bottom: 0;
-
-    }
- }
-
 
  @keyframes annimation_entree {
     0%{
@@ -101,6 +76,7 @@
 
     20%{
         opacity: 1;
+        filter: none;
 
     }
     90%{
@@ -108,6 +84,8 @@
     }
     100%{
         opacity: 0;
+        filter: none;
+
     }
  }
  @keyframes remplissage {

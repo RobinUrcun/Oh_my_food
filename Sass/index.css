@@ -330,8 +330,23 @@ footer li:nth-child(3) i {
   width: calc(90% - 80px);
 }
 
-.card-menu .like i {
+.icone-color {
+  position: relative;
+  display: flex;
+  align-items: center;
   transition: transform 0.5s linear 0.2s;
+}
+.icone-color::after {
+  font: var(--fa-font-solid);
+  content: "\f004";
+  position: absolute;
+  display: none;
+  background: linear-gradient(-15deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.icone-color:hover::after {
+  display: block;
 }
 
 .card-menu h4,
@@ -394,6 +409,7 @@ footer li:nth-child(3) i {
   height: 60px;
   animation: annimation_entree_booki 4s 1s;
   opacity: 0;
+  filter: blur(2px);
 }
 .annimation-entree .barre_de_chargement {
   width: 50%;
@@ -466,26 +482,6 @@ footer li:nth-child(3) i {
     gap: 20px;
   }
 }
-.icone-color-hp, .icone-color-restaurant {
-  position: relative;
-}
-.icone-color-hp::after, .icone-color-restaurant::after {
-  font: var(--fa-font-solid);
-  content: "\f004";
-  position: absolute;
-  display: none;
-  background: linear-gradient(-15deg, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.icone-color-hp:hover::after, .icone-color-restaurant:hover::after {
-  display: block;
-}
-
-.icone-color-restaurant::after {
-  bottom: 0;
-}
-
 @keyframes annimation_entree {
   0% {
     opacity: 1;
@@ -505,12 +501,14 @@ footer li:nth-child(3) i {
   }
   20% {
     opacity: 1;
+    filter: none;
   }
   90% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+    filter: none;
   }
 }
 @keyframes remplissage {
