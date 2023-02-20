@@ -330,13 +330,17 @@ footer li:nth-child(3) i {
   width: calc(90% - 80px);
 }
 
-.icone-color {
+.card-menu .like i {
+  transition: transform 0.5s linear 0.2s;
+}
+
+.icone-color-hp {
   position: relative;
   display: flex;
   align-items: center;
   transition: transform 0.5s linear 0.2s;
 }
-.icone-color::after {
+.icone-color-hp::after {
   font: var(--fa-font-solid);
   content: "\f004";
   position: absolute;
@@ -345,7 +349,7 @@ footer li:nth-child(3) i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.icone-color:hover::after {
+.icone-color-hp:hover::after {
   display: block;
 }
 

@@ -71,8 +71,11 @@
         }
     }
 }
+.card-menu .like i {
+    transition: transform 0.5s linear 0.2s;
+}
 
-.icone-color{
+.icone-color-hp{
     position: relative;
     display: flex;
     align-items: center;
