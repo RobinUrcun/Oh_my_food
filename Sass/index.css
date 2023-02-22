@@ -317,7 +317,7 @@ footer li:nth-child(3) i {
 }
 
 .card-menu {
-  transition: transform 1s 5s;
+  transition: transform 1s;
 }
 .card-menu:hover > .like {
   animation: add_to_panier 1s forwards;
@@ -334,13 +334,13 @@ footer li:nth-child(3) i {
   transition: transform 0.5s linear 0.2s;
 }
 
-.icone-color-hp {
+.icone-color {
   position: relative;
   display: flex;
   align-items: center;
   transition: transform 0.5s linear 0.2s;
 }
-.icone-color-hp::after {
+.icone-color::after {
   font: var(--fa-font-solid);
   content: "\f004";
   position: absolute;
@@ -349,7 +349,7 @@ footer li:nth-child(3) i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.icone-color-hp:hover::after {
+.icone-color:hover::after {
   display: block;
 }
 
@@ -380,6 +380,7 @@ footer li:nth-child(3) i {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .section-restaurants article .restaurants_indication h3 {
   margin: 15px 0 10px 20px;
@@ -411,7 +412,7 @@ footer li:nth-child(3) i {
 .annimation-entree img {
   width: 40%;
   height: 60px;
-  animation: annimation_entree_booki 4s 1s;
+  animation: annimation_entree_booki 5s 1s;
   opacity: 0;
   filter: blur(2px);
 }
@@ -490,7 +491,7 @@ footer li:nth-child(3) i {
   0% {
     opacity: 1;
   }
-  90% {
+  85% {
     opacity: 1;
   }
   100% {
