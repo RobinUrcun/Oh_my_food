@@ -213,7 +213,7 @@ header img {
 }
 .page_menu .titre_restaurant h2 {
   font-size: 34px;
-  font-weight: 900px;
+  font-weight: 900;
   font-style: italic;
 }
 .page_menu .titre_restaurant i {
@@ -453,6 +453,14 @@ footer li:nth-child(3) i {
   }
   100% {
     transform: translate(-100%, 0);
+  }
+}
+@keyframes loader_restaurant {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @media (min-width: 1250px) {
