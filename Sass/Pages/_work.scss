@@ -120,3 +120,26 @@
     }
     
  }
+ .effet_decale{
+    opacity: 0;
+    animation: effet_decale 2s forwards;
+    &:nth-child(2){
+        background-color: red;
+        animation: effet_decale;
+        animation-delay: 5s;
+    }
+    &:nth-child(3){
+        animation-delay: 1s;
+    
+    }
+}
+
+@keyframes effet_decale {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
