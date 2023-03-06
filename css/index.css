@@ -278,6 +278,7 @@ footer li:nth-child(3) i {
   flex-direction: column;
   width: 90%;
   white-space: nowrap;
+  transition: all 1s;
 }
 .card-menu .plat h4 {
   font-size: 20px;
@@ -314,19 +315,19 @@ footer li:nth-child(3) i {
   justify-content: center;
   width: 80px;
   background-color: #99E2D0;
+  transition: all 1s;
 }
 
 .card-menu {
   transition: transform 1s;
 }
 .card-menu:hover > .like {
-  animation: add_to_panier 1s forwards;
+  transform: translateX(-80px);
 }
 .card-menu:hover .like > i {
   transform: rotate(360deg);
 }
 .card-menu:hover > .plat {
-  transition: 1s;
   width: calc(90% - 80px);
 }
 
@@ -469,7 +470,7 @@ footer li:nth-child(3) i {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 5%;
   }
   .responsiv_flex a {
     width: calc(50% - 24px);
@@ -546,16 +547,27 @@ footer li:nth-child(3) i {
   }
 }
 .effet_decale {
+  flex: 1;
+}
+.effet_decale > :nth-child(2) {
   opacity: 0;
-  animation: effet_decale 2s forwards;
+  animation: effet_decale 1.5s forwards, effet_decale_hauteur 1.5s;
+  animation-delay: 0.3s;
 }
-.effet_decale:nth-child(2) {
-  background-color: red;
-  animation: effet_decale;
-  animation-delay: 5s;
+.effet_decale > :nth-child(3) {
+  opacity: 0;
+  animation: effet_decale 1.5s forwards, effet_decale_hauteur 1.5s;
+  animation-delay: 0.6s;
 }
-.effet_decale:nth-child(3) {
-  animation-delay: 1s;
+.effet_decale > :nth-child(4) {
+  opacity: 0;
+  animation: effet_decale 1.5s forwards, effet_decale_hauteur 1.5s;
+  animation-delay: 0.9s;
+}
+.effet_decale > :nth-child(5) {
+  opacity: 0;
+  animation: effet_decale 1.5s forwards, effet_decale_hauteur 1.5s;
+  animation-delay: 1.2s;
 }
 
 @keyframes effet_decale {
@@ -566,3 +578,11 @@ footer li:nth-child(3) i {
     opacity: 1;
   }
 }
+@keyframes effet_decale_hauteur {
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -15,6 +15,9 @@
         flex-direction: column;
         width: 90%;
         white-space: nowrap;
+        transition: all 1s;
+
+
         h4 {
             font-size: 20px;
             font-weight: 500;
@@ -53,19 +56,20 @@
     justify-content: center;
     width: 80px;
     background-color: #99E2D0;
+    transition: all 1s;
+
 }
 
 .card-menu {
     transition: transform 1s;
     &:hover {
         &>.like {
-            animation: add_to_panier 1s forwards;
+            transform: translateX(-80px);
         }
         & .like>i {
             transform: rotate(360deg);
         }
         &>.plat {
-            transition: 1s;
             width: calc(90% - 80px);
         }
     }
