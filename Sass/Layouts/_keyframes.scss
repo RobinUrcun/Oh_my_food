@@ -1,0 +1,90 @@
+@keyframes annimation_entree_booki {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+        filter: none;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        filter: none;
+    }
+ }
+
+ @keyframes remplissage {
+    0%{
+        transform: scaleX(0);
+        opacity: 1;
+    }
+    60%{
+        transform: scaleX(0.3);
+    }
+    100%{
+        transform: scaleX(1);
+        opacity: 1;
+    }   
+ }
+
+ @keyframes barre_de_chargement {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+ }
+
+ @keyframes annimation_entree {
+    0%{
+        opacity: 1;
+    }
+    85%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+        z-index: -1;
+    }
+ }
+
+ @keyframes add_to_panier{
+    0% {
+        transform: translate(0)
+    }
+    100% {
+        transform: translate(-100%, 0)
+    }  
+}
+
+@keyframes loader_restaurant {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+@keyframes effet_decale {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+@keyframes effet_decale_hauteur {
+    0%{
+        transform: translateY(30%)
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

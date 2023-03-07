@@ -1,0 +1,43 @@
+@media (min-width: 1250px ) {
+
+    .responsiv_flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        a{
+
+            width: calc( 50% - 24px);
+        }
+
+    }
+    
+    
+    .section-fonctionnement ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & li{
+            width: 30%;
+
+            p{
+                margin-left: 10px;
+            }
+
+            i{
+                margin-left: 25px;
+            }
+        }
+    }
+    
+    .section_flex_responsive{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+        
+    }
+}
